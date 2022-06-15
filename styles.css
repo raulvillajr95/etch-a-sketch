@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+
+  height: 25em;
+  width: 25em;
+
+  margin: 0;
+  padding: 0;
+  background-color: grey;
+}
+
+.container div {
+  width: 100%;
+}
+
+.container div div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+
+  height: 10%;
+}
+
+.red {
+  background-color: red;
+}
