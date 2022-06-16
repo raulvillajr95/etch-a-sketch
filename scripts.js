@@ -39,18 +39,12 @@ sizeBtn.addEventListener('click', () => {
         divCol.setAttribute('style', `height: ${heightPercent}%; background-color: ${randomColor}; opacity: 0`)
     
         divCol.addEventListener('mouseover', function() {
-          //this.classList.add('red')
-          //this.setAttribute('style', `height: ${heightPercent}%; background-color: rgb(${randomNum(255)}, ${randomNum(255)}, ${randomNum(255)})`)
-          //this.style.backgroundColor = `${randomColor}`
-          // console.log(this.style.opacity)
-          // this.style.opacity = toString(parseFloat(this.style.opacity) + 0.1)
-          // console.log(this.style.opacity)
-          // this.style.opacity = toString(this.style.opacity + 0.1)
-          // console.log(this.style.opacity)
+          if (this.style.opacity < 1) {
+            let opacity = parseFloat(this.style.opacity) + 0.1
 
-          let opacity = parseFloat(this.style.opacity) + 0.1
-
-          this.style.opacity = `${opacity}`
+            this.style.opacity = `${opacity}`
+            console.log(this.style.opacity)
+          }
         })
     
         divRow.appendChild(divCol)
@@ -59,12 +53,3 @@ sizeBtn.addEventListener('click', () => {
     }
   }
 })
-
-/*
--make it so the new random background color only happens once
-  I could assign it a random color from the start and display none
-  When I mouse over it displays
--every time mouse is over, the opacity goes up by 10% 
-  assing random color from the start
-  every mouse over the 'a' in rgba gets upped one
-*/
